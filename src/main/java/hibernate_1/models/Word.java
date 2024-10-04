@@ -1,4 +1,4 @@
-package models;
+package hibernate_1.models;
 
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;

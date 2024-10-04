@@ -7,7 +7,7 @@ import hibernate_1.utils.HibernateUtil;
 
 import java.util.List;
 
-public class Main {
+public class Main_1 {
     public static void main(String[] args) {
         // Создание объектов Word и сохранение в базу
         HibernateUtil.saveWord(new Word("Hello"));

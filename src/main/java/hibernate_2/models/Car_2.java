@@ -1,20 +1,20 @@
 package hibernate_2.models;
 
-import hibernate_2.enums.CarType;
+import hibernate_2.enums.CarType_2;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "Car")
+@Table(name = "Car_2")
 @NoArgsConstructor
-public class Car {
+public class Car_2 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String model;
 
     @Enumerated(EnumType.STRING)
-    private CarType type;
+    private CarType_2 type;
     private int power;
     private int price;
     private int year;
@@ -22,7 +22,7 @@ public class Car {
     @ManyToOne
     private Owner owner;
 
-    public Car(String model, CarType type, int power, int price, int year) {
+    public Car_2(String model, CarType_2 type, int power, int price, int year) {
         this.model = model;
         this.type = type;
         this.power = power;
@@ -36,8 +36,8 @@ public class Car {
     public String getModel() { return model; }
     public void setModel(String model) { this.model = model; }
 
-    public CarType getType() { return type; }
-    public void setType(CarType type) { this.type = type; }
+    public CarType_2 getType() { return type; }
+    public void setType(CarType_2 type) { this.type = type; }
 
     public int getPower() { return power; }
     public void setPower(int power) { this.power = power; }

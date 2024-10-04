@@ -1,7 +1,7 @@
-package utils;
+package hibernate_1.utils;
 
-import models.Word;
-import models.Car;
+import hibernate_1.models.Word;
+import hibernate_1.models.Car_1;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -28,10 +28,10 @@ public class HibernateUtil {
         return words;
     }
 
-    public static void saveCar(Car car) {
+    public static void saveCar(Car_1 car1) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        session.save(car);
+        session.save(car1);
         transaction.commit();
         session.close();
     }

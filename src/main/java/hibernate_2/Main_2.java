@@ -9,7 +9,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-public class Main {
+public class Main_2 {
     public static void main(String[] args) {
         // Конфигурирование и создание фабрики сессий
         SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();

@@ -1,12 +1,12 @@
 package hibernate_1.models;
 
-import hibernate_1.enums.CarType;
+import hibernate_1.enums.CarType_1;
 import jakarta.persistence.*;
 
 // Аналогично классу Word, класс Car обозначает таблицу car.
 @Entity
-@Table(name = "car")
-public class Car {
+@Table(name = "Car_1")
+public class Car_1 {
     // Поля включают id (первичный ключ с автоинкрементом), model (модель машины),
     // type (тип машины, который представлен через перечисление Enum),
     // power (мощность), price (цена) и year (год выпуска).
@@ -19,7 +19,7 @@ public class Car {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "type")
-    private CarType type;
+    private CarType_1 type;
 
     @Column(name = "power")
     private int power;
@@ -30,10 +30,10 @@ public class Car {
     @Column(name = "year")
     private int year;
 
-    public Car() {
+    public Car_1() {
     }
 
-    public Car(String model, CarType type, int power, double price, int year) {
+    public Car_1(String model, CarType_1 type, int power, double price, int year) {
         this.model = model;
         this.type = type;
         this.power = power;
@@ -49,7 +49,7 @@ public class Car {
         return model;
     }
 
-    public CarType getType() {
+    public CarType_1 getType() {
         return type;
     }
 
@@ -69,7 +69,7 @@ public class Car {
         this.model = model;
     }
 
-    public void setType(CarType type) {
+    public void setType(CarType_1 type) {
         this.type = type;
     }
 
